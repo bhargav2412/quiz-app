@@ -1,33 +1,15 @@
-import React from "react";
+import Timer from "../components/Timer";
+import ProgressBar from "../components/ProgressBar";
+import QuestionCard from "../components/QuestionCard";
 
-const quiz = () => {
+const Quiz = () => {
   return (
     <div className="container mt-4">
-      <div className="alert alert-info text-center fw-bold">
-        ⏳ Time Left: 15s
-      </div>
-      <div className="progress mb-3">
-        <div className="progress-bar" style="width: 50%;">
-          50%
-        </div>
-      </div>
-      <div className="card shadow p-4">
-        <h4 className="fw-semibold">React is mainly used for?</h4>
-        <div className="mt-3">
-          <button className="btn btn-outline-primary w-100 mt-2">
-            Styling
-          </button>
-          <button className="btn btn-outline-primary w-100 mt-2">
-            Mobile Apps
-          </button>
-          <button className="btn btn-outline-primary w-100 mt-2">
-            Building UI
-          </button>
-          <button className="btn btn-outline-primary w-100 mt-2">None</button>
-        </div>
-      </div>
+      <Timer />
+      <ProgressBar />
+      <QuestionCard />
     </div>
   );
 };
 
-export default quiz;
+export default Quiz;

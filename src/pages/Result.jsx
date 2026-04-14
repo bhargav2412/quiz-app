@@ -1,6 +1,6 @@
 import React from "react";
 
-const result = () => {
+const Result = () => {
   return (
     <div className="container text-center mt-5">
       <div className="card shadow p-5">
@@ -20,4 +20,4 @@ const result = () => {
   );
 };
 
-export default result;
+export default Result;
