@@ -1,16 +1,17 @@
-const QuestionCard = () => {
+const QuestionCard = ({ question, options, onSelect }) => {
   return (
     <div className="card shadow p-4">
-      <h4 className="fw-semibold">React is mainly used for?</h4>
+      <h4 className="fw-semibold">{question}</h4>
       <div className="mt-3">
-        <button className="btn btn-outline-primary w-100 mt-2">Styling</button>
-        <button className="btn btn-outline-primary w-100 mt-2">
-          Mobile Apps
-        </button>
-        <button className="btn btn-outline-primary w-100 mt-2">
-          Building UI
-        </button>
-        <button className="btn btn-outline-primary w-100 mt-2">None</button>
+        {options.map((opt, i) => (
+          <button
+            className="btn btn-outline-primary w-100 mt-2"
+            key={i}
+            onClick={() => onSelect(opt)}
+          >
+            {opt}
+          </button>
+        ))}
       </div>
     </div>
   );
