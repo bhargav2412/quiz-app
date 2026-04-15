@@ -12,6 +12,13 @@ const Quiz = () => {
   const navigate = useNavigate();
   const { time, reset } = useTimer(15);
 
+  useEffect(() => {
+    if (time === 0) {
+      dispatch({ type: "ANSWER", payload: false });
+      reset();
+    }
+  }, [time]);
+
   if (!questions || questions.length === 0) {
     return <h2 className="text-center mt-5">Loading question...</h2>;
   }
